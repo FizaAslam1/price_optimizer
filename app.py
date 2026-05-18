@@ -293,7 +293,7 @@ features = pd.DataFrame([[
 current_demand = max(0, model.predict(features)[0])
 current_profit = max(0, (current_price - cost_price) * current_demand)
 
-price_range = np.linspace(max(cost_price*0.75, 500), cost_price*2.5, 80)
+price_range = np.linspace(max(cost_price*0.75, 500), competitor_avg*1.2, 80)
 results = []
 for price in price_range:
     demand = max(0, model.predict(features)[0])
