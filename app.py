@@ -220,7 +220,7 @@ def load_or_create_model():
             df[f'comp{i}_price'] = (df['price'] * np.random.uniform(0.90, 1.10, len(df))).round(0)
         df['competitor_avg'] = df[['comp1_price','comp2_price','comp3_price']].mean(axis=1)
         df['price_diff'] = df['competitor_avg'] - df['price']
-        df['units_sold'] = (50 + (df['price_diff']/1000)*5 + (df['model_year']-2015)*2 
+        df['units_sold'] = (50 + (df['price_diff']/1000)*10 + (df['model_year']-2015)*2 
                             - (df['mileage']/10000)*1 - (df['horsepower']/100)*0.5)
         df['units_sold'] *= np.random.normal(1, 0.05, len(df))
         df['units_sold'] = df['units_sold'].clip(lower=5, upper=200).round(0).astype(int)
