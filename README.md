@@ -11,9 +11,6 @@
 Predicts how many units will sell at **any price point**, then finds the price that **maximizes total profit**.
 Profit = (Price - Cost) × Predicted Demand
 
-text
-
----
 
 ## ✨ Features
 
